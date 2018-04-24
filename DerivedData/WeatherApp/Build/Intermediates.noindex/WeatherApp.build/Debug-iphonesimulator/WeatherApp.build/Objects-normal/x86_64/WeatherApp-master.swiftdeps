@@ -1,0 +1,8 @@
+version: "Apple Swift version 4.1 (swiftlang-902.0.48 clang-902.0.37.1)"
+options: "e49840dae9590d010a4712f9f13ee157"
+build_time: [1524553388, 303946000]
+inputs:
+  "/Users/James/WeatherApp/WeatherApp/Constants.swift": !dirty [1524552584, 0]
+  "/Users/James/WeatherApp/WeatherApp/LocationWeather.swift": !dirty [1524553265, 0]
+  "/Users/James/WeatherApp/WeatherApp/ViewController.swift": !dirty [1524527760, 0]
+  "/Users/James/WeatherApp/WeatherApp/AppDelegate.swift": !dirty [1524461895, 0]
