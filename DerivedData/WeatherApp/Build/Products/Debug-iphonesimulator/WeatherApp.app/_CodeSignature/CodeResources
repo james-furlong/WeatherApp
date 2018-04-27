@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		Mfi/REmtiqVcaGiHYO6Mk5VLv3c=
+		UXZnmlfYaGpwh+kWC8PXXHpiSI8=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		e2qOKGVAkn1mZolP9tPk86m2jr8=
+		gXn7lXjBX1uuW6EoNFxuv+0Z4Mk=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		aOBuvS6RLcRHo6nD83SmNvSuKoc=
+		9WsiuzUPj5h9ZK+cnAj7/u7LUG4=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		qLoI6PN1gmxF5pHGTpxIWQbLJ98=
+		HHhpp3LZVjOOVwAPWkB/FCJPg0s=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
 		<data>
-		tE2qJQusR/koMbNf2Qb3n6zxV3o=
+		hPWyqANYsGJDMv79I7Mp6hMKuqk=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
@@ -98,15 +98,15 @@
 		</data>
 		<key>WeatherApp.momd/VersionInfo.plist</key>
 		<data>
-		e7+s0w47Uf0T3N2Fs5l4uYHJMn4=
+		Y+jXu8byl8OGCAHB6qNRmiU3ZZk=
 		</data>
 		<key>WeatherApp.momd/WeatherApp.mom</key>
 		<data>
-		+bfxD2Bs3/P5tzub3hjzUUS48Ig=
+		rlBLd58SR2q87gBzJTu1chj7KV0=
 		</data>
 		<key>WeatherApp.momd/WeatherApp.omo</key>
 		<data>
-		3iQ12Ae0XV625QsxMDAnOWXf/Yo=
+		pJNjKUOEdGZfhXGh5dXrBc6KM8Q=
 		</data>
 		<key>libswiftRemoteMirror.dylib</key>
 		<data>
@@ -119,22 +119,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Mfi/REmtiqVcaGiHYO6Mk5VLv3c=
+			UXZnmlfYaGpwh+kWC8PXXHpiSI8=
 			</data>
 			<key>hash2</key>
 			<data>
-			CF9LyyQKf2I8bkXg7NDWXIGHuIVFJK7hHKypoCF3nFU=
+			Ojcdn/2qCJZMWKrny+HZN3XO3JHY/nEUqkBthrUzwGI=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			e2qOKGVAkn1mZolP9tPk86m2jr8=
+			gXn7lXjBX1uuW6EoNFxuv+0Z4Mk=
 			</data>
 			<key>hash2</key>
 			<data>
-			gmQeA7UC6fAGcd3iyDl+CJdaLEpDr9qMDJn1E0wE7gA=
+			e2k4wv+oJvq/hFbSxl9X7frGEo44Vz/VtJkZrNKY2X0=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -152,22 +152,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aOBuvS6RLcRHo6nD83SmNvSuKoc=
+			9WsiuzUPj5h9ZK+cnAj7/u7LUG4=
 			</data>
 			<key>hash2</key>
 			<data>
-			CcjuSIuuP8jW5b8bV2gtlK1XjQHdDii5eMqtdener3M=
+			p67rTEuNOmWyH3YEW8OoZM6WEgaR790XYk723DDseaw=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qLoI6PN1gmxF5pHGTpxIWQbLJ98=
+			HHhpp3LZVjOOVwAPWkB/FCJPg0s=
 			</data>
 			<key>hash2</key>
 			<data>
-			iorOm7ajJQdh9bFQfgoo6ugMHE3j56yd8nfFy95sj9Y=
+			PdxiuwT+RSW+aFYZFwPeMwinCUb7M23dssXDr346p9E=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -185,11 +185,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tE2qJQusR/koMbNf2Qb3n6zxV3o=
+			hPWyqANYsGJDMv79I7Mp6hMKuqk=
 			</data>
 			<key>hash2</key>
 			<data>
-			IsdJqPXcT9NpsD1uualh94JKMFZ+aT5irDWsg/ByI6U=
+			KEn67dz2L+C4OgCuQHtm/g+neDHdvVa9n00gjKZFaTk=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>
@@ -350,33 +350,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			e7+s0w47Uf0T3N2Fs5l4uYHJMn4=
+			Y+jXu8byl8OGCAHB6qNRmiU3ZZk=
 			</data>
 			<key>hash2</key>
 			<data>
-			MvxDkTiRKJOBPnreyJ7hxLF/7bBScLFaIRKKlXybBy0=
+			8crTWM72VkDeA0t2+IN7LagtBzFS1LQpIcQ7tMm5+c0=
 			</data>
 		</dict>
 		<key>WeatherApp.momd/WeatherApp.mom</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+bfxD2Bs3/P5tzub3hjzUUS48Ig=
+			rlBLd58SR2q87gBzJTu1chj7KV0=
 			</data>
 			<key>hash2</key>
 			<data>
-			4GeRqRVhIFz8BQDxdrxBVRMQ1oDqwMJGEUG9AjMEEKA=
+			LUe94WFvLYa/jGhD37GdDestCr+/UOt2aNKfX75k4KM=
 			</data>
 		</dict>
 		<key>WeatherApp.momd/WeatherApp.omo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3iQ12Ae0XV625QsxMDAnOWXf/Yo=
+			pJNjKUOEdGZfhXGh5dXrBc6KM8Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			hbWOa5qP8gn7FX3z1ROhNQ/lIE2Mq8kjF93P4ZDK+4k=
+			/DbBWEuV3CeTCa1iNRmhFEZjHuZBWCY6r+QkFhYszHw=
 			</data>
 		</dict>
 		<key>libswiftRemoteMirror.dylib</key>

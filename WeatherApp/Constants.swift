@@ -8,5 +8,13 @@
 
 import Foundation
 
-let kURLBase =                      "http://api.openweathermap.org/data/2.5/weather?"
+let kURLBase =                      "https://api.openweathermap.org/data/2.5/"
 let kAPIKey =                       "&APPID=228b45a806189254911a8e234326d579"
+let kAirPressure =                  "airPressure"
+let kHighTemp =                     "highTemp"
+let kLowTemp =                      "lowTemp"
+let kHumidity =                     "humidity"
+let kRainFallen =                   "rainFallen"
+let kRainPredicted =                "rainPredicted"
+let kWindDirction =                 "windDirection"
+let kWindSpeed =                    "windSpeed"

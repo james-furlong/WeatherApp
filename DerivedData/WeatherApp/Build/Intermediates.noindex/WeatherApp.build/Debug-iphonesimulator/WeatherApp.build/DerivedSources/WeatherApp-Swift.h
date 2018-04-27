@@ -164,6 +164,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if __has_feature(modules)
 @import UIKit;
+@import CoreData;
+@import ObjectiveC;
+@import Foundation;
 @import CoreGraphics;
 #endif
 
@@ -197,22 +200,85 @@ SWIFT_CLASS("_TtC10WeatherApp11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSEntityDescription;
+@class NSManagedObjectContext;
+
+SWIFT_CLASS_NAMED("Details")
+@interface Details : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface Details (SWIFT_EXTENSION(WeatherApp))
+@property (nonatomic) BOOL airPressure;
+@property (nonatomic) BOOL highTemp;
+@property (nonatomic) BOOL humidity;
+@property (nonatomic) BOOL lowTemp;
+@property (nonatomic) BOOL rainFallen;
+@property (nonatomic) BOOL rainPredicted;
+@property (nonatomic) BOOL windDirection;
+@property (nonatomic) BOOL windSpeed;
+@end
+
+@class UILabel;
 @class NSCoder;
 
-SWIFT_CLASS("_TtC10WeatherApp24ForecastAndDataTableView")
-@interface ForecastAndDataTableView : UITableView
-- (nonnull instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS("_TtC10WeatherApp20DetailsTableViewCell")
+@interface DetailsTableViewCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified DataLabel1;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified DataDetails1;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified DataLabel2;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified DataDetails2;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC10WeatherApp14ForecastObject")
+@interface ForecastObject : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+@class UIImageView;
+
+SWIFT_CLASS("_TtC10WeatherApp21ForecastTableViewCell")
+@interface ForecastTableViewCell : UITableViewCell
+@property (nonatomic, copy) IBOutletCollection(UILabel) NSArray<UILabel *> * _Null_unspecified DaysArray;
+@property (nonatomic, copy) IBOutletCollection(UIImageView) NSArray<UIImageView *> * _Null_unspecified IconArray;
+@property (nonatomic, copy) IBOutletCollection(UILabel) NSArray<UILabel *> * _Null_unspecified TempArray;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITableView;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC10WeatherApp14ViewController")
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified ForecastAndDataTableView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified WeatherDescriptionLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified TemperatureLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified LocationLabel;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10WeatherApp13WeatherObject")
+@interface WeatherObject : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 #if __has_attribute(external_source_symbol)
