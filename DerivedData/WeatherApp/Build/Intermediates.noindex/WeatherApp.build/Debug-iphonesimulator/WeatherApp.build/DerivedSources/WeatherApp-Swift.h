@@ -255,6 +255,13 @@ SWIFT_CLASS("_TtC10WeatherApp21ForecastTableViewCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC10WeatherApp12ModuleObject")
+@interface ModuleObject : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
 @class UITableView;
 @class NSBundle;
 

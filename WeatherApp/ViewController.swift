@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var locationID : Int!
     var location : String!
     var forecastObjectsArray : [ForecastObject]!
+    var detailsArray = [ModuleObject]()
     var htSettings = true
     var ltSettings = true
     var raSettings = true
@@ -32,7 +33,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadInitialiseCoreDate()
         var count = 0
         // ******************************* //
         getWeather(location: "Camberwell,AU")
@@ -55,6 +55,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
         getForecastData()
+        loadInitialiseCoreDate()
         TemperatureLabel.text = String(Int(weather.Temperature))
         WeatherDescriptionLabel.text = String(weather.WeatherDescription)
         LocationLabel.text = String(weather.Name)
@@ -117,6 +118,38 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DataCell", for: indexPath) as! DetailsTableViewCell
+            if indexPath.row == 1 {
+                cell.DataLabel1.text = detailsArray[0].Name
+                cell.DataDetails1.text = detailsArray[0].Details
+                if detailsArray.indices.contains(1) {
+                    cell.DataLabel2.text = detailsArray[1].Name
+                    cell.DataDetails2.text = detailsArray[1].Details
+                }
+            }
+            if indexPath.row == 2 {
+                cell.DataLabel1.text = detailsArray[2].Name
+                cell.DataDetails1.text = detailsArray[2].Details
+                if detailsArray.indices.contains(3) {
+                    cell.DataLabel2.text = detailsArray[3].Name
+                    cell.DataDetails2.text = detailsArray[3].Details
+                }
+            }
+            if indexPath.row == 3 {
+                cell.DataLabel1.text = detailsArray[4].Name
+                cell.DataDetails1.text = detailsArray[4].Details
+                if detailsArray.indices.contains(5) {
+                    cell.DataLabel2.text = detailsArray[5].Name
+                    cell.DataDetails2.text = detailsArray[5].Details
+                }
+            }
+            if indexPath.row == 4 {
+                cell.DataLabel1.text = detailsArray[6].Name
+                cell.DataDetails1.text = detailsArray[6].Details
+                if detailsArray.indices.contains(7) {
+                    cell.DataLabel2.text = detailsArray[7].Name
+                    cell.DataDetails2.text = detailsArray[7].Details
+                }
+            }
             return cell
         }
     }
@@ -126,7 +159,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return (detailsArray.count / 2) + 1
     }
 
     func getWeather(location: String) {
@@ -262,14 +295,38 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
-                htSettings = (data.value(forKey: kHighTemp) != nil)
-                ltSettings = (data.value(forKey: kLowTemp) != nil)
-                raSettings = (data.value(forKey: kRainFallen) != nil)
-                rpSettings = (data.value(forKey: kRainPredicted) != nil)
-                humSettings = (data.value(forKey: kHumidity) != nil)
-                wsSettings = (data.value(forKey: kWindSpeed) != nil)
-                wdSettings = (data.value(forKey: kWindDirction) != nil)
-                apSettings = (data.value(forKey: kAirPressure) != nil)
+                if data.value(forKey: kHighTemp) != nil {
+                    detailsArray.append(ModuleObject(name: kHighTempLabel, details: weather.getHighTemp()))
+                }
+                if data.value(forKey: kLowTemp) != nil {
+                    detailsArray.append(ModuleObject(name: kLowTempLabel, details: weather.getLowTemp()))
+                }
+                if data.value(forKey: kRainFallen) != nil {
+                    if weather.Rain != nil {
+                        detailsArray.append(ModuleObject(name: kRainFallenLabel, details: weather.getActualRain()))
+                    } else {
+                        detailsArray.append(ModuleObject(name: kRainFallenLabel, details: "--"))
+                    }
+                }
+                if data.value(forKey: kRainPredicted) != nil {
+                    if weather.Rain != nil {
+                        detailsArray.append(ModuleObject(name: kRainPredictedLabel, details: weather.getActualRain()))
+                    } else {
+                        detailsArray.append(ModuleObject(name: kRainPredictedLabel, details: "--"))
+                    }
+                }
+                if data.value(forKey: kHumidity) != nil {
+                    detailsArray.append(ModuleObject(name: kHumidityLabel, details: weather.getHumidity()))
+                }
+                if data.value(forKey: kWindSpeed) != nil {
+                    detailsArray.append(ModuleObject(name: kWindSpeedLabel, details: weather.getWindSpeed()))
+                }
+                if data.value(forKey: kWindDirction) != nil {
+                    detailsArray.append(ModuleObject(name: kWindDirectionLabel, details: weather.getWindirection()))
+                }
+                if data.value(forKey: kAirPressure) != nil {
+                    detailsArray.append(ModuleObject(name: kAirPressureLabel, details: weather.getAirPressure()))
+                 }
             }
             let count = try context.count(for: request)
             if count == 0 {

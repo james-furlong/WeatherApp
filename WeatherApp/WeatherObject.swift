@@ -65,6 +65,60 @@ class WeatherObject: NSObject {
         return CelTemp
     }
     
+    func getHighTemp() -> String {
+        let temp = Int(TempHigh)
+        return String(temp)
+    }
+    
+    func getLowTemp() -> String {
+        let temp = Int(TempMin)
+        return String(temp)
+    }
+    
+    func getActualRain() -> String {
+        let temp = Int(Rain)
+        let string = "\(temp)mm"
+        return string
+    }
+    
+    func getHumidity() -> String {
+        let temp = Int(Humidity)
+        let string = "\(temp)%"
+        return string
+    }
+    
+    func getWindSpeed() -> String {
+        let temp = Int(WindSpeed)
+        let string = "\(temp) km/h"
+        return string
+    }
+    
+    func getWindirection() -> String {
+        if WindDirection > 337.5 || WindDirection <= 22.5 {
+            return "N"
+        } else if WindDirection > 22.5 && WindDirection <= 67.5 {
+            return "NE"
+        } else if WindDirection > 67.5 && WindDirection <= 112.5 {
+            return "E"
+        } else if WindDirection > 112.5 && WindDirection <= 157.5 {
+            return "SE"
+        } else if WindDirection > 157.5 && WindDirection <= 202.5 {
+            return "S"
+        } else if WindDirection > 202.5 && WindDirection <= 247.5 {
+            return "SW"
+        } else if WindDirection > 247.5 && WindDirection <= 292.5 {
+            return "W"
+        } else {
+            return "NW"
+        }
+    }
+    
+    func getAirPressure() -> String {
+        let temp = Int(Pressure)
+        let string = "\(temp) hPa"
+        return string
+    }
+    
     func convertUnixUTC(time: Double) -> String {
         let date = Date(timeIntervalSince1970: time)
         let dateFormatter = DateFormatter()

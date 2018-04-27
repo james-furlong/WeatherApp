@@ -7,7 +7,10 @@ provides-member:
 - ["10WeatherApp0A6ObjectC", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "&&"
 - !private "-"
+- !private "<="
+- !private ">"
 - "AssignmentPrecedence"
 - "CastingPrecedence"
 - !private "Date"
@@ -17,15 +20,20 @@ depends-top-level:
 - "NSObject"
 - "String"
 - !private "StringLiteralType"
+- !private "UnicodeScalarType"
 - "WeatherObject"
+- !private "||"
 depends-member:
 - !private ["Sa", "subscript"]
 - !private ["s23BidirectionalCollectionP", "init"]
 - !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "Date"]
 - !private ["s7CVarArgP", "DateFormatter"]
 - !private ["s7CVarArgP", "Humidity"]
 - !private ["s7CVarArgP", "ID"]
+- !private ["s7CVarArgP", "Int"]
 - !private ["s7CVarArgP", "Name"]
 - !private ["s7CVarArgP", "Pressure"]
 - !private ["s7CVarArgP", "Rain"]
@@ -41,6 +49,7 @@ depends-member:
 - !private ["s7CVarArgP", "WindDirection"]
 - !private ["s7CVarArgP", "WindSpeed"]
 - ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "convertKtoC"]
 - !private ["s7CVarArgP", "convertUnixUTC"]
 - !private ["s7CVarArgP", "dateFormat"]
@@ -54,6 +63,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "DateFormatter"]
 - !private ["s28CustomDebugStringConvertibleP", "Humidity"]
 - !private ["s28CustomDebugStringConvertibleP", "ID"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
 - !private ["s28CustomDebugStringConvertibleP", "Name"]
 - !private ["s28CustomDebugStringConvertibleP", "Pressure"]
 - !private ["s28CustomDebugStringConvertibleP", "Rain"]
@@ -75,13 +85,16 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "string"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "Date"]
 - !private ["s23CustomStringConvertibleP", "DateFormatter"]
 - !private ["s23CustomStringConvertibleP", "Humidity"]
 - !private ["s23CustomStringConvertibleP", "ID"]
+- !private ["s23CustomStringConvertibleP", "Int"]
 - !private ["s23CustomStringConvertibleP", "Name"]
 - !private ["s23CustomStringConvertibleP", "Pressure"]
 - !private ["s23CustomStringConvertibleP", "Rain"]
@@ -97,6 +110,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "WindDirection"]
 - !private ["s23CustomStringConvertibleP", "WindSpeed"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "convertKtoC"]
 - !private ["s23CustomStringConvertibleP", "convertUnixUTC"]
 - !private ["s23CustomStringConvertibleP", "dateFormat"]
@@ -107,15 +121,18 @@ depends-member:
 - !private ["So13DateFormatterC", "dateFormat"]
 - !private ["So13DateFormatterC", "init"]
 - !private ["So13DateFormatterC", "string"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - !private ["s9DecodableP", "init"]
 - !private ["s9DecodableP", "subscript"]
 - !private ["s10DictionaryV", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
 - !private ["s9EncodableP", "init"]
 - !private ["s9EncodableP", "subscript"]
 - !private ["s9EquatableP", "Date"]
 - !private ["s9EquatableP", "DateFormatter"]
 - !private ["s9EquatableP", "Humidity"]
 - !private ["s9EquatableP", "ID"]
+- !private ["s9EquatableP", "Int"]
 - !private ["s9EquatableP", "Name"]
 - !private ["s9EquatableP", "Pressure"]
 - !private ["s9EquatableP", "Rain"]
@@ -131,6 +148,7 @@ depends-member:
 - !private ["s9EquatableP", "WindDirection"]
 - !private ["s9EquatableP", "WindSpeed"]
 - ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "convertKtoC"]
 - !private ["s9EquatableP", "convertUnixUTC"]
 - !private ["s9EquatableP", "dateFormat"]
@@ -138,10 +156,13 @@ depends-member:
 - !private ["s9EquatableP", "string"]
 - !private ["s9EquatableP", "subscript"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
 - !private ["So9FormatterC", "dateFormat"]
 - !private ["So9FormatterC", "init"]
 - !private ["So9FormatterC", "string"]
@@ -149,6 +170,7 @@ depends-member:
 - !private ["s8HashableP", "DateFormatter"]
 - !private ["s8HashableP", "Humidity"]
 - !private ["s8HashableP", "ID"]
+- !private ["s8HashableP", "Int"]
 - !private ["s8HashableP", "Name"]
 - !private ["s8HashableP", "Pressure"]
 - !private ["s8HashableP", "Rain"]
@@ -164,11 +186,14 @@ depends-member:
 - !private ["s8HashableP", "WindDirection"]
 - !private ["s8HashableP", "WindSpeed"]
 - ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
 - !private ["s8HashableP", "convertKtoC"]
 - !private ["s8HashableP", "convertUnixUTC"]
 - !private ["s8HashableP", "dateFormat"]
 - !private ["s8HashableP", "init"]
 - !private ["s8HashableP", "string"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["s17MutableCollectionP", "subscript"]
@@ -202,12 +227,20 @@ depends-member:
 - ["So8NSObjectC", "convertKtoC"]
 - ["So8NSObjectC", "convertUnixUTC"]
 - !private ["So8NSObjectC", "dateFormat"]
+- ["So8NSObjectC", "getActualRain"]
+- ["So8NSObjectC", "getAirPressure"]
+- ["So8NSObjectC", "getHighTemp"]
+- ["So8NSObjectC", "getHumidity"]
+- ["So8NSObjectC", "getLowTemp"]
+- ["So8NSObjectC", "getWindSpeed"]
+- ["So8NSObjectC", "getWindirection"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "string"]
 - !private ["So16NSObjectProtocolP", "Date"]
 - !private ["So16NSObjectProtocolP", "DateFormatter"]
 - !private ["So16NSObjectProtocolP", "Humidity"]
 - !private ["So16NSObjectProtocolP", "ID"]
+- !private ["So16NSObjectProtocolP", "Int"]
 - !private ["So16NSObjectProtocolP", "Name"]
 - !private ["So16NSObjectProtocolP", "Pressure"]
 - !private ["So16NSObjectProtocolP", "Rain"]
@@ -228,13 +261,17 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "dateFormat"]
 - !private ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "string"]
+- !private ["s7NumericP", "init"]
 - !private ["s22RandomAccessCollectionP", "subscript"]
 - !private ["s26RangeReplaceableCollectionP", "init"]
 - !private ["s26RangeReplaceableCollectionP", "subscript"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["s8SequenceP", "init"]
 - !private ["s8SequenceP", "subscript"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "init"]
 - !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
 - !private ["SS", "init"]
 - !private ["s14StringProtocolP", "init"]
 - !private ["s16TextOutputStreamP", "init"]
@@ -262,10 +299,20 @@ depends-member:
 - ["10WeatherApp0A6ObjectC", "convertKtoC"]
 - ["10WeatherApp0A6ObjectC", "convertUnixUTC"]
 - ["10WeatherApp0A6ObjectC", "deinit"]
+- ["10WeatherApp0A6ObjectC", "getActualRain"]
+- ["10WeatherApp0A6ObjectC", "getAirPressure"]
+- ["10WeatherApp0A6ObjectC", "getHighTemp"]
+- ["10WeatherApp0A6ObjectC", "getHumidity"]
+- ["10WeatherApp0A6ObjectC", "getLowTemp"]
+- ["10WeatherApp0A6ObjectC", "getWindSpeed"]
+- ["10WeatherApp0A6ObjectC", "getWindirection"]
 - ["10WeatherApp0A6ObjectC", "init"]
 - !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s18_BitwiseOperationsP", "init"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
@@ -274,6 +321,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DateFormatter"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Humidity"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ID"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Name"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Pressure"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Rain"]
@@ -294,12 +342,15 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dateFormat"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "string"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - !private "Sa"
 - !private "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
 - "s7CVarArgP"
 - !private "s10CollectionP"
 - !private "s10ComparableP"
@@ -314,12 +365,16 @@ depends-nominal:
 - !private "s9EncodableP"
 - "s9EquatableP"
 - !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
 - !private "So9FormatterC"
 - "s8HashableP"
+- !private "Si"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - !private "s17MutableCollectionP"
@@ -327,19 +382,26 @@ depends-nominal:
 - !private "So9NSCopyingP"
 - "So8NSObjectC"
 - "So16NSObjectProtocolP"
+- !private "s7NumericP"
 - !private "s22RandomAccessCollectionP"
 - !private "s26RangeReplaceableCollectionP"
 - !private "10Foundation20ReferenceConvertibleP"
 - !private "s8SequenceP"
+- !private "s13SignedIntegerP"
+- !private "s13SignedNumericP"
 - !private "s12StaticStringV"
+- !private "s10StrideableP"
 - !private "SS"
 - !private "s14StringProtocolP"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
 - "10WeatherApp0A6ObjectC"
 - !private "s14_ArrayProtocolP"
+- !private "s18_BitwiseOperationsP"
 - !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
@@ -374,4 +436,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.3.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "ef97afd35a56789d5f995638d5d41bf9"
+interface-hash: "a69939e09b711ccdfdc565fc57e57fb1"
