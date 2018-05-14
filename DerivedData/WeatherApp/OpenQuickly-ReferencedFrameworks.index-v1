@@ -2,8 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>UIKit</string>
-	<string>CoreData</string>
 	<string>Foundation</string>
+	<string>AVFoundation</string>
+	<string>CoreLocation</string>
+	<string>CoreData</string>
+	<string>UIKit</string>
+	<string>AVKit</string>
 </array>
 </plist>

@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		+jtV2KQEGy+AEPlvgxHknu0stH0=
+		6GuGc2/yR7mHgP7R0rMS/GeL2cM=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		nloIu5fkvYiHIExv5WlhM5haEPo=
+		GksBePYwReEcwIxXwO+C3ZLEohg=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -18,23 +18,55 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		iKQ2Ohyg8WKRx7kNZ3qS7latrs4=
+		rUN1BkVANx2a28SKv/yp4DAodes=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		81N3c5W/VXst2HqeoLMWZ5vlid4=
+		xPCkCvf5bX8YfrSw2uabTuPybrs=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		MDrKFvFWroTb0+KEbQShBcoBvo4=
+		lLZzbCkNqhXIIoPPWXVlwOMZkdg=
 		</data>
-		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
+		<key>Base.lproj/Main.storyboardc/SettingsViewController.nib</key>
 		<data>
-		uUcOXzEOGWT2aeVtYaveBZXZLOo=
+		/wOsHp2OFD86l6nB7p5GoXs3d0Q=
+		</data>
+		<key>Base.lproj/Main.storyboardc/UIViewController-d2q-cU-OOC.nib</key>
+		<data>
+		13xLsXRW7eNtRR3Hb/JLXAuIkXg=
+		</data>
+		<key>Base.lproj/Main.storyboardc/WeatherViewController.nib</key>
+		<data>
+		EgqyttYblZn3pj5cS5msF4LpoXc=
+		</data>
+		<key>Base.lproj/Main.storyboardc/d2q-cU-OOC-view-u1U-g5-fIc.nib</key>
+		<data>
+		AvhmBzJMwzr7K7aNq0oOGa+Eet8=
+		</data>
+		<key>Base.lproj/Main.storyboardc/uZK-lY-oZz-view-FoG-TW-aZl.nib</key>
+		<data>
+		7e22NsXgK7kl/yY8tGlZDNCyMtY=
+		</data>
+		<key>Cloudy.mp4</key>
+		<data>
+		bE7KM1fp4J+CWLFfvD4N5aAcew8=
+		</data>
+		<key>Fog.mp4</key>
+		<data>
+		DW/LoYNt0tSEdGqsj9GJxxfyc4k=
+		</data>
+		<key>Frameworks/libswiftAVFoundation.dylib</key>
+		<data>
+		NreSiBX9hv1g4ELUCdt4pw4EERU=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
 		kNTktO/5G3xNevL0uYOXKp9Zdcg=
+		</data>
+		<key>Frameworks/libswiftCoreAudio.dylib</key>
+		<data>
+		Lzi+dn7ZUEKiSPjgKtzhj1kZKJc=
 		</data>
 		<key>Frameworks/libswiftCoreData.dylib</key>
 		<data>
@@ -51,6 +83,14 @@
 		<key>Frameworks/libswiftCoreImage.dylib</key>
 		<data>
 		TIMG08D9LpsY+ERv4BBzb4lze2Q=
+		</data>
+		<key>Frameworks/libswiftCoreLocation.dylib</key>
+		<data>
+		f/BVm/eThfz849RZXsdGSzIeRuw=
+		</data>
+		<key>Frameworks/libswiftCoreMedia.dylib</key>
+		<data>
+		RO/HUkEy8nK/KRqtwc6nC+ZDEv0=
 		</data>
 		<key>Frameworks/libswiftDarwin.dylib</key>
 		<data>
@@ -88,25 +128,49 @@
 		<data>
 		3Ow21zsQMzSlbncczlHB7M2KUag=
 		</data>
+		<key>Frameworks/libswiftsimd.dylib</key>
+		<data>
+		h6bBYaNJuMpJ5T6dp+zq42g7rQ8=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		rxq4ZGfUhEEW4c5odwEMnux86bw=
+		SNw0PJ7cgUCPcL1ssxdjpNweY3g=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>Rain.mp4</key>
+		<data>
+		IeEeKWYPKqkP/F+m2cmVBlpwA6A=
+		</data>
+		<key>Snowy.mp4</key>
+		<data>
+		zVsfDkw2Uf3GqSQB7A3I2t4BMnY=
+		</data>
+		<key>Thunderstorm.mp4</key>
+		<data>
+		yJa2X8sZCY3NZSnYzKBkBpyfL7E=
+		</data>
 		<key>WeatherApp.momd/VersionInfo.plist</key>
 		<data>
-		Y+jXu8byl8OGCAHB6qNRmiU3ZZk=
+		tlHrMRDqjj7N6QNkhCwre63ch0Y=
 		</data>
 		<key>WeatherApp.momd/WeatherApp.mom</key>
 		<data>
-		rlBLd58SR2q87gBzJTu1chj7KV0=
+		yaiHBSKBAWS4azj/vaBqknwPX40=
 		</data>
 		<key>WeatherApp.momd/WeatherApp.omo</key>
 		<data>
-		pJNjKUOEdGZfhXGh5dXrBc6KM8Q=
+		2yGFBJ7zVbsXOXJ0Dez6tGbsM2M=
+		</data>
+		<key>Windy.mp4</key>
+		<data>
+		cG8GCh3Zp2K4XZjDMSAfA04R2hs=
+		</data>
+		<key>Xcode 8 .gitignore</key>
+		<data>
+		Z4kYna5E8C1a+CamT+qfYhEuOCo=
 		</data>
 		<key>libswiftRemoteMirror.dylib</key>
 		<data>
@@ -119,22 +183,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+jtV2KQEGy+AEPlvgxHknu0stH0=
+			6GuGc2/yR7mHgP7R0rMS/GeL2cM=
 			</data>
 			<key>hash2</key>
 			<data>
-			63QAw+tLX0eeJcQPyc5A0gDhegfogiFHf1Hz8ie8Mhk=
+			5WpyFUBEeIR3+NforuxYd5iV/IzFaqxQULTd01qPbjU=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nloIu5fkvYiHIExv5WlhM5haEPo=
+			GksBePYwReEcwIxXwO+C3ZLEohg=
 			</data>
 			<key>hash2</key>
 			<data>
-			r7ln3NC618+l8HnAMGKR1IOUJoSabQu6NsAoZSR2hjM=
+			W01zJlTvmJRKsPtLPCoorSA73gmUQhzPm99K54CaXhA=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -152,44 +216,121 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iKQ2Ohyg8WKRx7kNZ3qS7latrs4=
+			rUN1BkVANx2a28SKv/yp4DAodes=
 			</data>
 			<key>hash2</key>
 			<data>
-			fHSOP2E+ZzmNWEWbjNxV3CrgzH49+5EhosY9BxJUVVs=
+			0NRI9z42tzIjHOjVlgOZfLUQNh/oBjxbsI5/oySxDhM=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			81N3c5W/VXst2HqeoLMWZ5vlid4=
+			xPCkCvf5bX8YfrSw2uabTuPybrs=
 			</data>
 			<key>hash2</key>
 			<data>
-			gKWmLWfYy3DpH4ZdH4TZAM6f1wdNOeLv7j5Wipz0X0c=
+			dfuWyxPjGEXUG9w7GzV+Sq6fhVhwKXPiiUKTvn6RMu8=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MDrKFvFWroTb0+KEbQShBcoBvo4=
+			lLZzbCkNqhXIIoPPWXVlwOMZkdg=
 			</data>
 			<key>hash2</key>
 			<data>
-			PpvapAjR62rl6Ym4E6hkTgpKmBICxTaQXeUqcpHmmqQ=
+			ndXU/c2O14k7+XADMfn04VlmA2baBwZ4HsW4WxsRkbg=
 			</data>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
+		<key>Base.lproj/Main.storyboardc/SettingsViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			uUcOXzEOGWT2aeVtYaveBZXZLOo=
+			/wOsHp2OFD86l6nB7p5GoXs3d0Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			2f7M/cg4wADYGGh32hbqZOiL2+sqj11Da57q7RDWf2g=
+			hTPs/USlYHjv9nGcu+Qrr22WH0LJY1mqnVccqaDc688=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/UIViewController-d2q-cU-OOC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			13xLsXRW7eNtRR3Hb/JLXAuIkXg=
+			</data>
+			<key>hash2</key>
+			<data>
+			gINdWvHD9XWGC8Ffg5IDPRfRNQVBMxpoopJA+VjqdSA=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/WeatherViewController.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			EgqyttYblZn3pj5cS5msF4LpoXc=
+			</data>
+			<key>hash2</key>
+			<data>
+			Woq0p2f4sAfUjrcbUM168ElBiGQlV8F5DPBfQu8BGPw=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/d2q-cU-OOC-view-u1U-g5-fIc.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AvhmBzJMwzr7K7aNq0oOGa+Eet8=
+			</data>
+			<key>hash2</key>
+			<data>
+			FJ7ufIdPP3K0fDfeK3Gf1ZhqroMV9vWVNJ0TP72PzoI=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/uZK-lY-oZz-view-FoG-TW-aZl.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7e22NsXgK7kl/yY8tGlZDNCyMtY=
+			</data>
+			<key>hash2</key>
+			<data>
+			XPM69wkPtWeb4/JGg17LareN2aRmmviXbvpHM4gfunA=
+			</data>
+		</dict>
+		<key>Cloudy.mp4</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			bE7KM1fp4J+CWLFfvD4N5aAcew8=
+			</data>
+			<key>hash2</key>
+			<data>
+			6kBAEmB1KhFofH/+pvECAtU/hsbDixrLvtanVK3Bzd8=
+			</data>
+		</dict>
+		<key>Fog.mp4</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DW/LoYNt0tSEdGqsj9GJxxfyc4k=
+			</data>
+			<key>hash2</key>
+			<data>
+			wengx0AQNSdpRAsbZO2d3QxJlfUg4xpqe8oB//N0Awo=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftAVFoundation.dylib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NreSiBX9hv1g4ELUCdt4pw4EERU=
+			</data>
+			<key>hash2</key>
+			<data>
+			5nm1HIZYNuoROJyOG+J3cDN10Ir1holV8jE3MZHQktM=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>
@@ -201,6 +342,17 @@
 			<key>hash2</key>
 			<data>
 			owWDw3N53D4aQAQQsNZvRN8Xh1T5K3RzKLIMGpRjYCE=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftCoreAudio.dylib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Lzi+dn7ZUEKiSPjgKtzhj1kZKJc=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZFgAbtBCpYOtWgNreiK6n0m3uW6idx2x+RNReQA6eI8=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCoreData.dylib</key>
@@ -245,6 +397,28 @@
 			<key>hash2</key>
 			<data>
 			g/xy3c1N5Z60f60gZ5rNGBb8XRWo6p2cntY2EbHmIr8=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftCoreLocation.dylib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			f/BVm/eThfz849RZXsdGSzIeRuw=
+			</data>
+			<key>hash2</key>
+			<data>
+			cIc4A0bDApmSCZYKHEbdRFLJBocg6hyT2qlbawZPhtg=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftCoreMedia.dylib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RO/HUkEy8nK/KRqtwc6nC+ZDEv0=
+			</data>
+			<key>hash2</key>
+			<data>
+			eNDOASAPfsYDdeGKGwhH5wHpGIfuAmAda+PLIHQZTfY=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftDarwin.dylib</key>
@@ -346,37 +520,103 @@
 			ZELEy0+mGvQ/x24vS+Et0BpCroFmT1ziL0T+PA+gQUg=
 			</data>
 		</dict>
+		<key>Frameworks/libswiftsimd.dylib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			h6bBYaNJuMpJ5T6dp+zq42g7rQ8=
+			</data>
+			<key>hash2</key>
+			<data>
+			RO0Oe+sVltxGSxpJEx5mMg1dRDMrasUa0LsvoAVvv3U=
+			</data>
+		</dict>
+		<key>Rain.mp4</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			IeEeKWYPKqkP/F+m2cmVBlpwA6A=
+			</data>
+			<key>hash2</key>
+			<data>
+			IPuDx+TFBWiz9zvydbEz94m/WVC7Ra4JyvxSXMyYypI=
+			</data>
+		</dict>
+		<key>Snowy.mp4</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zVsfDkw2Uf3GqSQB7A3I2t4BMnY=
+			</data>
+			<key>hash2</key>
+			<data>
+			j7UJ5l+fUTS5sVLsaZwWVTpFM92yJ6aNkxi9p3lcKOg=
+			</data>
+		</dict>
+		<key>Thunderstorm.mp4</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yJa2X8sZCY3NZSnYzKBkBpyfL7E=
+			</data>
+			<key>hash2</key>
+			<data>
+			zQJkhI2RKDL5qkHFzwFJX6lButn/Ktyh4AWDuBJ/RDI=
+			</data>
+		</dict>
 		<key>WeatherApp.momd/VersionInfo.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Y+jXu8byl8OGCAHB6qNRmiU3ZZk=
+			tlHrMRDqjj7N6QNkhCwre63ch0Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			8crTWM72VkDeA0t2+IN7LagtBzFS1LQpIcQ7tMm5+c0=
+			RyFwvVndnXRh2tBoQ1hekJGhDGOyP3w/QAL9NU53qyQ=
 			</data>
 		</dict>
 		<key>WeatherApp.momd/WeatherApp.mom</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rlBLd58SR2q87gBzJTu1chj7KV0=
+			yaiHBSKBAWS4azj/vaBqknwPX40=
 			</data>
 			<key>hash2</key>
 			<data>
-			LUe94WFvLYa/jGhD37GdDestCr+/UOt2aNKfX75k4KM=
+			sUAgZnvlbGFo5wsIZxZQS8L/I7x//QKYk13VIWiOmMU=
 			</data>
 		</dict>
 		<key>WeatherApp.momd/WeatherApp.omo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pJNjKUOEdGZfhXGh5dXrBc6KM8Q=
+			2yGFBJ7zVbsXOXJ0Dez6tGbsM2M=
 			</data>
 			<key>hash2</key>
 			<data>
-			/DbBWEuV3CeTCa1iNRmhFEZjHuZBWCY6r+QkFhYszHw=
+			efMTAUjCK0QrXWY+dKiQIGVy5sUeNa4MiKUtHhLxERE=
+			</data>
+		</dict>
+		<key>Windy.mp4</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cG8GCh3Zp2K4XZjDMSAfA04R2hs=
+			</data>
+			<key>hash2</key>
+			<data>
+			dJhrD3pKtKDwGJOog5EpTs120OiVYH47dnI152N9jcU=
+			</data>
+		</dict>
+		<key>Xcode 8 .gitignore</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Z4kYna5E8C1a+CamT+qfYhEuOCo=
+			</data>
+			<key>hash2</key>
+			<data>
+			pvyaFWj2ku7JI8oGLAfj3IkD4VFQPHgkEH8A9ivTFFE=
 			</data>
 		</dict>
 		<key>libswiftRemoteMirror.dylib</key>

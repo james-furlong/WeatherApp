@@ -38,7 +38,7 @@ class WeatherObject: NSObject {
             self.Humidity = weatherMain["humidity"] as! Int
         }
         if let weatherRain = weather["rain"] as? [String:Any] {
-            self.Rain = weatherRain["rain"] as! Double
+            self.Rain = weatherRain["3h"] as! Double
         }
         if let weatherSys = weather["sys"] as? [String:Any] {
             self.Sunrise = convertUnixUTC(time: weatherSys["sunrise"] as! Double)

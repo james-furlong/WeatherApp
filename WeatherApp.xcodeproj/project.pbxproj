@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0DE7AE2097279C006C2B97 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0DE7AD2097279C006C2B97 /* ThemeViewController.swift */; };
+		1A0DE7B4209BBF67006C2B97 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0DE7B3209BBF67006C2B97 /* VideoViewController.swift */; };
+		1A0DE7BA209BD182006C2B97 /* Cloudy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1A0DE7B8209BD173006C2B97 /* Cloudy.mp4 */; };
+		1A0DE7BB209BD182006C2B97 /* Rain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1A0DE7B9209BD17A006C2B97 /* Rain.mp4 */; };
 		1A30ED3E208EACD50023454F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30ED3D208EACD50023454F /* Constants.swift */; };
+		1A50807E20A683BF00FD0591 /* Windy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1A50807A20A683B900FD0591 /* Windy.mp4 */; };
+		1A50807F20A683BF00FD0591 /* Snowy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1A50807B20A683BB00FD0591 /* Snowy.mp4 */; };
+		1A50808020A683BF00FD0591 /* Fog.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1A50807C20A683BD00FD0591 /* Fog.mp4 */; };
+		1A50808120A683BF00FD0591 /* Thunderstorm.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1A50807D20A683BF00FD0591 /* Thunderstorm.mp4 */; };
 		1AA7CCEA208DA8C700A63FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA7CCE9208DA8C700A63FCF /* AppDelegate.swift */; };
 		1AA7CCEC208DA8C700A63FCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA7CCEB208DA8C700A63FCF /* ViewController.swift */; };
 		1AA7CCEF208DA8C700A63FCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA7CCED208DA8C700A63FCF /* Main.storyboard */; };
@@ -20,10 +28,20 @@
 		1AF0D2942092944400EB40E2 /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF0D2932092944400EB40E2 /* DetailsTableViewCell.swift */; };
 		1AF0D2962092A89B00EB40E2 /* ModuleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF0D2952092A89B00EB40E2 /* ModuleObject.swift */; };
 		1AF0D2A02092BD0600EB40E2 /* Xcode 8 .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1AF0D29F2092BD0600EB40E2 /* Xcode 8 .gitignore */; };
+		1AF0D2A22092DF2B00EB40E2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF0D2A12092DF2B00EB40E2 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A0DE7AD2097279C006C2B97 /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
+		1A0DE7B3209BBF67006C2B97 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		1A0DE7B8209BD173006C2B97 /* Cloudy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cloudy.mp4; sourceTree = "<group>"; };
+		1A0DE7B9209BD17A006C2B97 /* Rain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rain.mp4; sourceTree = "<group>"; };
 		1A30ED3D208EACD50023454F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1A50807A20A683B900FD0591 /* Windy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Windy.mp4; sourceTree = "<group>"; };
+		1A50807B20A683BB00FD0591 /* Snowy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Snowy.mp4; sourceTree = "<group>"; };
+		1A50807C20A683BD00FD0591 /* Fog.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fog.mp4; sourceTree = "<group>"; };
+		1A50807D20A683BF00FD0591 /* Thunderstorm.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thunderstorm.mp4; sourceTree = "<group>"; };
+		1A50808220A683EF00FD0591 /* Sunny.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sunny.mp4; sourceTree = "<group>"; };
 		1AA7CCE6208DA8C700A63FCF /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA7CCE9208DA8C700A63FCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AA7CCEB208DA8C700A63FCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +56,7 @@
 		1AF0D2932092944400EB40E2 /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
 		1AF0D2952092A89B00EB40E2 /* ModuleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleObject.swift; sourceTree = "<group>"; };
 		1AF0D29F2092BD0600EB40E2 /* Xcode 8 .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Xcode 8 .gitignore"; sourceTree = "<group>"; };
+		1AF0D2A12092DF2B00EB40E2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +70,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A0DE7B7209BD164006C2B97 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				1A0DE7B8209BD173006C2B97 /* Cloudy.mp4 */,
+				1A0DE7B9209BD17A006C2B97 /* Rain.mp4 */,
+				1A50807C20A683BD00FD0591 /* Fog.mp4 */,
+				1A50807B20A683BB00FD0591 /* Snowy.mp4 */,
+				1A50807D20A683BF00FD0591 /* Thunderstorm.mp4 */,
+				1A50807A20A683B900FD0591 /* Windy.mp4 */,
+				1A50808220A683EF00FD0591 /* Sunny.mp4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
 		1AA7CCDD208DA8C700A63FCF = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +104,7 @@
 		1AA7CCE8208DA8C700A63FCF /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				1A0DE7B7209BD164006C2B97 /* Videos */,
 				1AF0D29E2092BC2900EB40E2 /* Core Data */,
 				1AF0D29D2092BC1700EB40E2 /* Resources */,
 				1AF0D29C2092BC0700EB40E2 /* Storyboards */,
@@ -95,6 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				1AA7CCEB208DA8C700A63FCF /* ViewController.swift */,
+				1AF0D2A12092DF2B00EB40E2 /* SettingsViewController.swift */,
+				1A0DE7AD2097279C006C2B97 /* ThemeViewController.swift */,
+				1A0DE7B3209BBF67006C2B97 /* VideoViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -210,9 +247,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0DE7BA209BD182006C2B97 /* Cloudy.mp4 in Resources */,
+				1A50807F20A683BF00FD0591 /* Snowy.mp4 in Resources */,
+				1A0DE7BB209BD182006C2B97 /* Rain.mp4 in Resources */,
+				1A50807E20A683BF00FD0591 /* Windy.mp4 in Resources */,
 				1AA7CCF7208DA8C900A63FCF /* LaunchScreen.storyboard in Resources */,
 				1AA7CCF4208DA8C900A63FCF /* Assets.xcassets in Resources */,
+				1A50808020A683BF00FD0591 /* Fog.mp4 in Resources */,
 				1AA7CCEF208DA8C700A63FCF /* Main.storyboard in Resources */,
+				1A50808120A683BF00FD0591 /* Thunderstorm.mp4 in Resources */,
 				1AF0D2A02092BD0600EB40E2 /* Xcode 8 .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,9 +269,12 @@
 			files = (
 				1AF0D29020902AB300EB40E2 /* ForecastTableViewCell.swift in Sources */,
 				1A30ED3E208EACD50023454F /* Constants.swift in Sources */,
+				1A0DE7B4209BBF67006C2B97 /* VideoViewController.swift in Sources */,
 				1AF0D2922090476200EB40E2 /* ForecastObject.swift in Sources */,
+				1AF0D2A22092DF2B00EB40E2 /* SettingsViewController.swift in Sources */,
 				1AA7CCF2208DA8C700A63FCF /* WeatherApp.xcdatamodeld in Sources */,
 				1AA7CCEC208DA8C700A63FCF /* ViewController.swift in Sources */,
+				1A0DE7AE2097279C006C2B97 /* ThemeViewController.swift in Sources */,
 				1AF0D2962092A89B00EB40E2 /* ModuleObject.swift in Sources */,
 				1AF0D28E208FF08500EB40E2 /* WeatherObject.swift in Sources */,
 				1AF0D2942092944400EB40E2 /* DetailsTableViewCell.swift in Sources */,

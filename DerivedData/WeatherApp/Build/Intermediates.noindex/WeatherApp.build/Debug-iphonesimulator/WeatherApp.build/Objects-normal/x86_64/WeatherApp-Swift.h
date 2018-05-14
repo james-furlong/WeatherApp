@@ -166,6 +166,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import UIKit;
 @import CoreData;
 @import ObjectiveC;
+@import CoreLocation;
 @import Foundation;
 @import CoreGraphics;
 #endif
@@ -249,6 +250,7 @@ SWIFT_CLASS("_TtC10WeatherApp21ForecastTableViewCell")
 @property (nonatomic, copy) IBOutletCollection(UILabel) NSArray<UILabel *> * _Null_unspecified DaysArray;
 @property (nonatomic, copy) IBOutletCollection(UIImageView) NSArray<UIImageView *> * _Null_unspecified IconArray;
 @property (nonatomic, copy) IBOutletCollection(UILabel) NSArray<UILabel *> * _Null_unspecified TempArray;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified forecastLabel;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
@@ -262,21 +264,92 @@ SWIFT_CLASS("_TtC10WeatherApp12ModuleObject")
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
-@class UITableView;
+@class UISwitch;
+@class UIButton;
 @class NSBundle;
 
+SWIFT_CLASS("_TtC10WeatherApp22SettingsViewController")
+@interface SettingsViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified maxTemp;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified minTemp;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified predRain;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified actRain;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified windSpeed;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified windDir;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified humidity;
+@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified airPressure;
+@property (nonatomic, copy) IBOutletCollection(UILabel) NSArray<UILabel *> * _Null_unspecified labelArray;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified themeButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified saveButton;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified cancelButton;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)saveButtonTouchUp:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS_NAMED("Theme")
+@interface Theme : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface Theme (SWIFT_EXTENSION(WeatherApp))
+@property (nonatomic, copy) NSString * _Nullable theme;
+@end
+
+
+SWIFT_CLASS("_TtC10WeatherApp19ThemeViewController")
+@interface ThemeViewController : UIViewController
+@property (nonatomic, copy) IBOutletCollection(UIImageView) NSArray<UIImageView *> * _Null_unspecified tickImagesArray;
+@property (nonatomic, copy) IBOutletCollection(UIButton) NSArray<UIButton *> * _Null_unspecified labelCollection;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified doneButton;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)themeTouchedUo:(UIButton * _Nonnull)sender;
+- (IBAction)doneButtonTouchedUp:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10WeatherApp19VideoViewController")
+@interface VideoViewController : UIViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITableView;
+@class UIToolbar;
+@class UIBarButtonItem;
+@class CLLocationManager;
+@class CLLocation;
+
 SWIFT_CLASS("_TtC10WeatherApp14ViewController")
-@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface ViewController : UIViewController <CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified ForecastAndDataTableView;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified WeatherDescriptionLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified TemperatureLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified LocationLabel;
+@property (nonatomic, copy) IBOutletCollection(UILabel) NSArray<UILabel *> * _Null_unspecified labelCollection;
+@property (nonatomic, copy) IBOutletCollection(UILabel) NSArray<UILabel *> * _Null_unspecified mainLabelCollection;
+@property (nonatomic, weak) IBOutlet UIToolbar * _Null_unspecified toolbar;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem * _Null_unspecified bookmarksButton;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem * _Null_unspecified settingsButton;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified weatherImage;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified videoViewController;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (void)playerItemDidReachEnd;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

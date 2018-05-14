@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var DataLabel1: UILabel!
@@ -16,7 +17,43 @@ class DetailsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        loadCoreData()
+    }
+    
+    func loadCoreData() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Theme")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request) as! [Theme]
+            if result.isEmpty {
+                setColors(back: UIColor.white, text: UIColor.darkGray)
+            } else {
+                for data in result {
+                    switch data.theme {
+                    case kWinter : setColors(back: UIColor.white, text: UIColor.darkGray)
+                    case kSummer : setColors(back: UIColor.blue, text: UIColor.yellow)
+                    case kDark : setColors(back: UIColor.black, text: UIColor.white)
+                    case kAutumn : setColors(back: UIColor.brown, text: UIColor.orange)
+                    default : setColors(back: UIColor.white, text: UIColor.darkGray)
+                    }
+                }
+            }
+        } catch {
+            print("Data retrieval failed")
+        }
+    }
+    
+    func setColors(back: UIColor, text: UIColor) {
+        DataLabel1.textColor = text
+        DataLabel1.backgroundColor = back
+        DataDetails1.textColor = text
+        DataDetails1.backgroundColor = back
+        DataLabel2.textColor = text
+        DataLabel2.backgroundColor = back
+        DataDetails2.textColor = text
+        DataDetails2.backgroundColor = back
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

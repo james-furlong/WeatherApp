@@ -10,7 +10,11 @@
         <attribute name="windDirection" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="windSpeed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
+    <entity name="Theme" representedClassName="Theme" syncable="YES" codeGenerationType="class">
+        <attribute name="theme" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Details" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="Theme" positionX="-63" positionY="45" width="128" height="60"/>
     </elements>
 </model>
