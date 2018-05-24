@@ -31,6 +31,7 @@ class ThemeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Load the core data
     func loadCoreData() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -43,6 +44,7 @@ class ThemeViewController: UIViewController {
         setColors()
     }
     
+    // Set the colors to the view controller as the user selects it. Change the position of the 'tick' to show the user which theme they are currently using.
     func setThemeData() {
         var tagNumber = 0
         switch theme {
@@ -61,6 +63,7 @@ class ThemeViewController: UIViewController {
         }
     }
     
+    // Update the colors in accordance with the theme
     func updateColors() {
         for label in labelCollection {
             label.setTitleColor(textColor, for: .normal)
@@ -70,20 +73,21 @@ class ThemeViewController: UIViewController {
         doneButton.backgroundColor = textColor
     }
 
+    // Each theme selection. Triggers the theme change and the change of position for the 'tick'
     @IBAction func themeTouchedUo(_ sender: UIButton) {
         switch sender.tag {
         case 0 : theme = kWinter
             textColor = UIColor.darkGray
             backgroundColor = UIColor.white
         case 1 : theme = kSummer
-            textColor = UIColor.yellow
-            backgroundColor = UIColor.blue
+        backgroundColor = UIColor(red: 201/255, green: 224/255, blue: 212/225, alpha: 1.0)
+        textColor = UIColor(red: 26/255, green: 86/255, blue: 132/255, alpha: 1.0)
         case 2 : theme = kDark
-            textColor = UIColor.white
-            backgroundColor = UIColor.black
+        backgroundColor = UIColor.black
+        textColor = UIColor(red: 196/255, green: 188/255, blue: 186/255, alpha: 1.0)
         case 3 : theme = kAutumn
-            textColor = UIColor.orange
-            backgroundColor = UIColor.brown
+        backgroundColor = UIColor(red: 188/255, green: 132/255, blue: 98/255, alpha: 1.0)
+        textColor = UIColor(red: 132/255, green: 42/255, blue: 26/255, alpha: 1.0)
         default : theme = kWinter
             textColor = UIColor.darkGray
             backgroundColor = UIColor.white
@@ -92,6 +96,7 @@ class ThemeViewController: UIViewController {
         setThemeData()
     }
     
+    // Saves the relevant theme to core data and presents the SettingsViewController
     @IBAction func doneButtonTouchedUp(_ sender: Any) {
         var themeDetails = [Theme]()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -126,24 +131,14 @@ class ThemeViewController: UIViewController {
         switch theme {
         case kWinter : backgroundColor = UIColor.white
             textColor = UIColor.darkGray
-        case kSummer : backgroundColor = UIColor.cyan
-            textColor = UIColor.yellow
-        case kAutumn : backgroundColor = UIColor.brown
-            textColor = UIColor.orange
+        case kSummer : backgroundColor = UIColor(red: 201/255, green: 224/255, blue: 212/225, alpha: 1.0)
+            textColor = UIColor(red: 26/255, green: 86/255, blue: 132/255, alpha: 1.0)
+        case kAutumn : backgroundColor = UIColor(red: 188/255, green: 132/255, blue: 98/255, alpha: 1.0)
+            textColor = UIColor(red: 132/255, green: 42/255, blue: 26/255, alpha: 1.0)
         case kDark : backgroundColor = UIColor.black
-            textColor = UIColor.white
+            textColor = UIColor(red: 196/255, green: 188/255, blue: 186/255, alpha: 1.0)
         default : backgroundColor = UIColor.white
             textColor = UIColor.darkGray
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -4,13 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AppIcon60x60@2x.png</key>
+		<data>
+		cTBugXb4qcDJ37BXwjoCFbazDAY=
+		</data>
+		<key>AppIcon76x76@2x~ipad.png</key>
+		<data>
+		K3dKrHbnOYImeYJ3fbXA71THctk=
+		</data>
 		<key>Assets.car</key>
 		<data>
-		6GuGc2/yR7mHgP7R0rMS/GeL2cM=
+		KHA6/c1JXl84OpEuY/QMHmrhMeU=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		GksBePYwReEcwIxXwO+C3ZLEohg=
+		rURxNmrESx0AB4q0BEhYD6EF5yI=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -18,35 +26,35 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		rUN1BkVANx2a28SKv/yp4DAodes=
+		EL5+NzTM7RtahnDYuSpwHuGdBTw=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		xPCkCvf5bX8YfrSw2uabTuPybrs=
+		PMA5gumEGufgkjWtIdOyPUPzDcI=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		lLZzbCkNqhXIIoPPWXVlwOMZkdg=
+		W8B+wrqPWpWKP0r0usvTW8BBrHk=
 		</data>
 		<key>Base.lproj/Main.storyboardc/SettingsViewController.nib</key>
 		<data>
-		/wOsHp2OFD86l6nB7p5GoXs3d0Q=
+		5mGdnwscST09VmgFpNzsP736d9E=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-d2q-cU-OOC.nib</key>
 		<data>
-		13xLsXRW7eNtRR3Hb/JLXAuIkXg=
+		2W7TxE6ow42z/e3r+S7bfo9HiXc=
 		</data>
 		<key>Base.lproj/Main.storyboardc/WeatherViewController.nib</key>
 		<data>
-		EgqyttYblZn3pj5cS5msF4LpoXc=
+		ADNVpq3pDHqWo0z/Vf4C7qvrmyQ=
 		</data>
 		<key>Base.lproj/Main.storyboardc/d2q-cU-OOC-view-u1U-g5-fIc.nib</key>
 		<data>
-		AvhmBzJMwzr7K7aNq0oOGa+Eet8=
+		7ILe7PDWgSvs6qEyiB27ci4+Qlw=
 		</data>
 		<key>Base.lproj/Main.storyboardc/uZK-lY-oZz-view-FoG-TW-aZl.nib</key>
 		<data>
-		7e22NsXgK7kl/yY8tGlZDNCyMtY=
+		gY3OhNHi+00i3Iv21W/yjesLFKs=
 		</data>
 		<key>Cloudy.mp4</key>
 		<data>
@@ -134,7 +142,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		SNw0PJ7cgUCPcL1ssxdjpNweY3g=
+		yDn8haMArBqIYZWxToeIPpDtuys=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -154,15 +162,15 @@
 		</data>
 		<key>WeatherApp.momd/VersionInfo.plist</key>
 		<data>
-		tlHrMRDqjj7N6QNkhCwre63ch0Y=
+		pkEXSm1w6OS6Q1NqPnuve7adAMc=
 		</data>
 		<key>WeatherApp.momd/WeatherApp.mom</key>
 		<data>
-		yaiHBSKBAWS4azj/vaBqknwPX40=
+		jxzyV7PoBaNn/VR6SJZC7PgQCY0=
 		</data>
 		<key>WeatherApp.momd/WeatherApp.omo</key>
 		<data>
-		2yGFBJ7zVbsXOXJ0Dez6tGbsM2M=
+		tSPvyghYtFt6Yeeifx3rK6dpx+o=
 		</data>
 		<key>Windy.mp4</key>
 		<data>
@@ -179,26 +187,48 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AppIcon60x60@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cTBugXb4qcDJ37BXwjoCFbazDAY=
+			</data>
+			<key>hash2</key>
+			<data>
+			02PpxKk0TKYQ1MIxiODqaxuhxbg90zXmDqitShTGIbQ=
+			</data>
+		</dict>
+		<key>AppIcon76x76@2x~ipad.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			K3dKrHbnOYImeYJ3fbXA71THctk=
+			</data>
+			<key>hash2</key>
+			<data>
+			PayJGY1dOsNctZZ5/PQT3QO/erCXAOnvjRmuldOCZ/0=
+			</data>
+		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6GuGc2/yR7mHgP7R0rMS/GeL2cM=
+			KHA6/c1JXl84OpEuY/QMHmrhMeU=
 			</data>
 			<key>hash2</key>
 			<data>
-			5WpyFUBEeIR3+NforuxYd5iV/IzFaqxQULTd01qPbjU=
+			krBzFeTb4bC0PSeW9w4SyNztulZv17WstSDrNA5t8SI=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GksBePYwReEcwIxXwO+C3ZLEohg=
+			rURxNmrESx0AB4q0BEhYD6EF5yI=
 			</data>
 			<key>hash2</key>
 			<data>
-			W01zJlTvmJRKsPtLPCoorSA73gmUQhzPm99K54CaXhA=
+			MnaRC7GyvcqpIV3IR7cnP582at+ZaA9I1DAt33c/XGY=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -216,88 +246,88 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rUN1BkVANx2a28SKv/yp4DAodes=
+			EL5+NzTM7RtahnDYuSpwHuGdBTw=
 			</data>
 			<key>hash2</key>
 			<data>
-			0NRI9z42tzIjHOjVlgOZfLUQNh/oBjxbsI5/oySxDhM=
+			LNtlMbAvdM3VwLyYeEnMcKOFJwhbU3lj0awn70lhTqU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xPCkCvf5bX8YfrSw2uabTuPybrs=
+			PMA5gumEGufgkjWtIdOyPUPzDcI=
 			</data>
 			<key>hash2</key>
 			<data>
-			dfuWyxPjGEXUG9w7GzV+Sq6fhVhwKXPiiUKTvn6RMu8=
+			1lkwAMIs68nT1W2y22OIJNh0YZI5JoXaIAM6p+jlhMM=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lLZzbCkNqhXIIoPPWXVlwOMZkdg=
+			W8B+wrqPWpWKP0r0usvTW8BBrHk=
 			</data>
 			<key>hash2</key>
 			<data>
-			ndXU/c2O14k7+XADMfn04VlmA2baBwZ4HsW4WxsRkbg=
+			EvlYsUUrp1+lCfXlHc3bz4ihnCpqOEYRHg+mqWRP4+o=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/SettingsViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/wOsHp2OFD86l6nB7p5GoXs3d0Q=
+			5mGdnwscST09VmgFpNzsP736d9E=
 			</data>
 			<key>hash2</key>
 			<data>
-			hTPs/USlYHjv9nGcu+Qrr22WH0LJY1mqnVccqaDc688=
+			YBU7NSHz3huJfzVYHbejww0TCNXJPhbpSjCwKgeuN0I=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-d2q-cU-OOC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			13xLsXRW7eNtRR3Hb/JLXAuIkXg=
+			2W7TxE6ow42z/e3r+S7bfo9HiXc=
 			</data>
 			<key>hash2</key>
 			<data>
-			gINdWvHD9XWGC8Ffg5IDPRfRNQVBMxpoopJA+VjqdSA=
+			zWF1PQQ6fWkLXA7SEZdMALIT+HsVAPdP8AORgmLs5Kg=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/WeatherViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EgqyttYblZn3pj5cS5msF4LpoXc=
+			ADNVpq3pDHqWo0z/Vf4C7qvrmyQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			Woq0p2f4sAfUjrcbUM168ElBiGQlV8F5DPBfQu8BGPw=
+			+QyVKj8bBuBQSYPEBh/fDrSC7KIus2+cusyRg391Vzo=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/d2q-cU-OOC-view-u1U-g5-fIc.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AvhmBzJMwzr7K7aNq0oOGa+Eet8=
+			7ILe7PDWgSvs6qEyiB27ci4+Qlw=
 			</data>
 			<key>hash2</key>
 			<data>
-			FJ7ufIdPP3K0fDfeK3Gf1ZhqroMV9vWVNJ0TP72PzoI=
+			BcpwItga33uJJZqlFEpIBlBB61BzJdvEtFzITgczs8U=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/uZK-lY-oZz-view-FoG-TW-aZl.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7e22NsXgK7kl/yY8tGlZDNCyMtY=
+			gY3OhNHi+00i3Iv21W/yjesLFKs=
 			</data>
 			<key>hash2</key>
 			<data>
-			XPM69wkPtWeb4/JGg17LareN2aRmmviXbvpHM4gfunA=
+			sSDebW2iC0BhHKAGZwcfPrDbZimBwPhHm7Ftm/1NkvI=
 			</data>
 		</dict>
 		<key>Cloudy.mp4</key>
@@ -568,33 +598,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tlHrMRDqjj7N6QNkhCwre63ch0Y=
+			pkEXSm1w6OS6Q1NqPnuve7adAMc=
 			</data>
 			<key>hash2</key>
 			<data>
-			RyFwvVndnXRh2tBoQ1hekJGhDGOyP3w/QAL9NU53qyQ=
+			cN7wXSTWE+5hszmUEuDqaPz5fyu5IbfWZkCxyoHpmPI=
 			</data>
 		</dict>
 		<key>WeatherApp.momd/WeatherApp.mom</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yaiHBSKBAWS4azj/vaBqknwPX40=
+			jxzyV7PoBaNn/VR6SJZC7PgQCY0=
 			</data>
 			<key>hash2</key>
 			<data>
-			sUAgZnvlbGFo5wsIZxZQS8L/I7x//QKYk13VIWiOmMU=
+			vswXXOC5InjOlvv7ReakK2Ss6fxnZgsvPC+BE2UhG38=
 			</data>
 		</dict>
 		<key>WeatherApp.momd/WeatherApp.omo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2yGFBJ7zVbsXOXJ0Dez6tGbsM2M=
+			tSPvyghYtFt6Yeeifx3rK6dpx+o=
 			</data>
 			<key>hash2</key>
 			<data>
-			efMTAUjCK0QrXWY+dKiQIGVy5sUeNa4MiKUtHhLxERE=
+			sZBvTxgpEQ+wxawv+m4S+yxNXIXDqKe8Y3E3JYHZAfw=
 			</data>
 		</dict>
 		<key>Windy.mp4</key>

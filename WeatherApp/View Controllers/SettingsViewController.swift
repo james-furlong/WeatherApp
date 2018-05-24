@@ -39,6 +39,7 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Load the core data for the theme that is to be used
     func loadCoreData() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -54,18 +55,19 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    // Update the colours to match the theme that has been retrieved from core data
     func updateColors() {
         var backgroundColor : UIColor!
         var textColor : UIColor!
         switch theme {
         case kWinter : backgroundColor = UIColor.white
             textColor = UIColor.darkGray
-        case kSummer : backgroundColor = UIColor.blue
-            textColor = UIColor.yellow
-        case kAutumn : backgroundColor = UIColor.brown
-            textColor = UIColor.orange
+        case kSummer : backgroundColor = UIColor(red: 201/255, green: 224/255, blue: 212/225, alpha: 1.0)
+        textColor = UIColor(red: 26/255, green: 86/255, blue: 132/255, alpha: 1.0)
+        case kAutumn : backgroundColor = UIColor(red: 188/255, green: 132/255, blue: 98/255, alpha: 1.0)
+        textColor = UIColor(red: 132/255, green: 42/255, blue: 26/255, alpha: 1.0)
         case kDark : backgroundColor = UIColor.black
-            textColor = UIColor.white
+        textColor = UIColor(red: 196/255, green: 188/255, blue: 186/255, alpha: 1.0)
         default : backgroundColor = UIColor.white
             textColor = UIColor.darkGray
         }
@@ -86,6 +88,7 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    // Update the data for the switched used to display the setting information
     func updateSwitches() {
         for data in detailsArray {
             airPressure.isOn = data.value(forKey: kAirPressure) as! Bool
@@ -99,6 +102,7 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    // Save the data for the switched into core data
     func saveSwitches() {
         var details = [Details]()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -123,20 +127,12 @@ class SettingsViewController: UIViewController {
         } catch {}
     }
 
+    // Save button. Saves the switch information into core data, then presents the WeatherViewController
     @IBAction func saveButtonTouchUp(_ sender: Any) {
         saveSwitches()
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyBoard.instantiateViewController(withIdentifier: "WeatherViewController") as UIViewController
+        let controller = storyBoard.instantiateViewController(withIdentifier: "WeatherViewController") as! ViewController
+        //controller.initialiseWeather()
         self.present(controller, animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

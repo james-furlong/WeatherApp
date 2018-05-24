@@ -50,15 +50,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getLocation()
+        if weather != nil {
+            initialiseWeather()
+        } else {
+            getLocation()
+        }
     }
     
+    // Initialise all of the components that go together to retrieve weather details and display them to the user. This function is only called once a location has been established
     func initialiseWeather() {
         var count = 0
         if weather != nil {
+            //loadInitialiseCoreDate()
+            loadWeatherVideo()
+            updateLabels()
             return
         }
         getWeather(location: location)
+        // A loop to ensure put a timeout on the response from the API call
         while weather == nil {
             count += 1
             if count == 100000000 {
@@ -69,6 +78,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         locationID = weather.ID
         getForecast(id: locationID)
         count = 0
+        // A loop to ensure put a timeout on the response from the API call
         while forecastArray == nil {
             count += 1
             if count == 100000000 {
@@ -90,6 +100,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     
+    // Update all the main labels with the information from the json request
     func updateLabels() {
         TemperatureLabel.text = String(Int(weather.Temperature))
         WeatherDescriptionLabel.text = String(weather.WeatherDescription)
@@ -97,10 +108,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ForecastAndDataTableView.reloadData()
     }
     
+    // Initialise the location manager and begin updating the users current location.
     func getLocation() {
         locationManager = CLLocationManager()
         guard CLLocationManager.locationServicesEnabled() else {
-            print("Location services are disabled on your device. In order to use this app you will need to allow location services.")
+            // An alert message to the user if location services are disabled
+            let alert = UIAlertController(title: "Location Services", message: "Location services are disabled on your device. In order to use this app you will need to allow location services.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
             return
         }
         
@@ -131,6 +146,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Check if the row being accessed is the forecast row, and if it is, follow the next code block to assign the correct information
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ForecastCell", for: indexPath) as! ForecastTableViewCell
             var count = 0
@@ -179,7 +195,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
             }
             return cell
-        } else {
+        } else { // If the cell being accessed is not the forecast cell, then it will be a detail cell. Determine which detail cell it is and provide the relevant information for that cell.
             let cell = tableView.dequeueReusableCell(withIdentifier: "DataCell", for: indexPath) as! DetailsTableViewCell
             if indexPath.row == 1 {
                 cell.DataLabel1.text = detailsArray[0].Name
@@ -229,6 +245,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    // Load the weather video for the top of the view controller. If there is no video available, fall back onto static image of a clear day.
     func loadWeatherVideo() {
         let videoString = Bundle.main.path(forResource: weather.WeatherMain, ofType: "mp4")
         guard let unwrappedVideoPath = videoString else {
@@ -245,11 +262,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         player?.play()
     }
     
+    // Loop the video once it has reached the end
     @ objc func playerItemDidReachEnd() {
         player!.seek(to: kCMTimeZero)
         player.play()
     }
 
+    // API request for the weather in the current location
     func getWeather(location: String) {
         let url = URL(string: "\(kURLBase)weather?q=\(location)\(kAPIKey)")!
         var request = URLRequest(url:url)
@@ -271,6 +290,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }.resume()
     }
+    
+    // API request for forecast data in the current location
     func getForecast(id: Int) {
         let url = URL(string: "\(kURLBase)forecast?id=\(id)\(kAPIKey)")!
         var request = URLRequest(url: url)
@@ -289,6 +310,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }.resume()
     }
     
+    // Extract the forecast data from the returned json from the function getForecast
     func getForecastData() {
         var desc = ""
         var tempArray = [ForecastObject(temp: self.weather.Temperature + 273.15, weather: self.weather.WeatherMain, date: self.weather.WeatherDate)]
@@ -309,6 +331,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         forecastObjectsArray = tempArray
     }
     
+    // Check the date on the forecast data. As the data is provided in 3hr increments, this removes the additional information so that we only have one set of data for each day.
     func checkDate(date: Double) -> Bool {
         let tempDate = Date(timeIntervalSince1970: date)
         let df = DateFormatter()
@@ -327,6 +350,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return false
     }
     
+    // Determine which icon is most suitable for the weather information being dispalyed
     func selectIcon(name: String) -> UIImage {
         if name == "Clouds" {
             return UIImage(named: "Cloudy")!
@@ -339,6 +363,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    // Determine what day it is today, and then determine what the next 5 days are
     func selectDay(day: String) -> String {
         let dayArray = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
         var count = 0
@@ -355,28 +380,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return "--"
     }
     
-    func checkForCompleteion(object: Any!) {
-        var count = 0
-        while self.weather == nil {
-            count += 1
-            if count == 100000000 {
-                //Show alert for timeout and cancel json request
-                print("Too long")
-            }
-        }
-        count = 0
-        while self.forecastArray == nil {
-            count += 1
-            if count == 100000000 {
-                //Show alert for timeout and cancel json request
-                print("Too long")
-            }
-        }
-    }
-    
+    // Update the colors of the theme, including the navigation bar at the bottom of the view controller
     func updateThemeColor(text : UIColor, background : UIColor, toolbarText : UIColor, toolbarBackground : UIColor) {
         for label in labelCollection {
             label.textColor = text
+            label.backgroundColor = nil
         }
         for label in mainLabelCollection {
             label.textColor = UIColor.white
@@ -389,6 +397,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         view.backgroundColor = background
     }
     
+    // func to receive the information from updating the current location. Location is then stored locally, displayed, and then used to determine the location for the weather APIs
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue : CLLocationCoordinate2D = manager.location?.coordinate else { return }
         geocode(latitude: locValue.latitude, longitude: locValue.longitude) { placemark, error in
@@ -406,6 +415,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    // Get the geocode of the location given by the location manager
     func geocode(latitude: Double, longitude: Double, completion: @escaping (CLPlacemark?, Error?) -> ()) {
         CLGeocoder().reverseGeocodeLocation(CLLocation(latitude: latitude, longitude: longitude)) { placemarks, error in
             guard let placemark = placemarks?.first, error == nil else {
@@ -416,6 +426,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    
+    // Load all of the core date required for the view controller. This is for both the actual weather details, as well as the theme details.
     func loadInitialiseCoreDate() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -495,20 +507,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         toolbarTextColor = UIColor.white
                         toolbarBackgroundColor = UIColor.darkGray
                     } else if (data.value(forKey: kTheme) as? String) == kSummer {
-                        textColor = UIColor.yellow
-                        backgroundColor = UIColor.blue
-                        toolbarTextColor = UIColor.blue
-                        toolbarBackgroundColor = UIColor.yellow
+                        backgroundColor = UIColor(red: 201/255, green: 224/255, blue: 212/225, alpha: 1.0)
+                        textColor = UIColor(red: 26/255, green: 86/255, blue: 132/255, alpha: 1.0)
+                        toolbarTextColor = UIColor(red: 201/255, green: 224/255, blue: 212/225, alpha: 1.0)
+                        toolbarBackgroundColor = UIColor(red: 26/255, green: 86/255, blue: 132/255, alpha: 1.0)
                     } else if (data.value(forKey: kTheme) as? String) == kAutumn {
-                        textColor = UIColor.orange
-                        backgroundColor = UIColor.brown
-                        toolbarTextColor = UIColor.brown
-                        toolbarBackgroundColor = UIColor.orange
+                        backgroundColor = UIColor(red: 188/255, green: 132/255, blue: 98/255, alpha: 1.0)
+                        textColor = UIColor(red: 132/255, green: 42/255, blue: 26/255, alpha: 1.0)
+                        toolbarTextColor = UIColor(red: 188/255, green: 132/255, blue: 98/255, alpha: 1.0)
+                        toolbarBackgroundColor = UIColor(red: 132/255, green: 42/255, blue: 26/255, alpha: 1.0)
                     } else {
-                        textColor = UIColor.white
                         backgroundColor = UIColor.black
-                        toolbarTextColor = UIColor.white
-                        toolbarBackgroundColor = UIColor.black
+                        textColor = UIColor(red: 196/255, green: 188/255, blue: 186/255, alpha: 1.0)
+                        toolbarTextColor = UIColor.black
+                        toolbarBackgroundColor = UIColor(red: 196/255, green: 188/255, blue: 186/255, alpha: 1.0)
                     }
                 }
             }

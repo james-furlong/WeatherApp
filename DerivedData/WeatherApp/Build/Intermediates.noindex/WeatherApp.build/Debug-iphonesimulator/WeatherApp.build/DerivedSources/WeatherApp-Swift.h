@@ -231,7 +231,6 @@ SWIFT_CLASS("_TtC10WeatherApp20DetailsTableViewCell")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified DataLabel2;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified DataDetails2;
 - (void)awakeFromNib;
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -252,9 +251,21 @@ SWIFT_CLASS("_TtC10WeatherApp21ForecastTableViewCell")
 @property (nonatomic, copy) IBOutletCollection(UILabel) NSArray<UILabel *> * _Null_unspecified TempArray;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified forecastLabel;
 - (void)awakeFromNib;
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS_NAMED("Locations")
+@interface Locations : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface Locations (SWIFT_EXTENSION(WeatherApp))
+@property (nonatomic) double latitude;
+@property (nonatomic) double longitude;
+@property (nonatomic, copy) NSString * _Nullable name;
 @end
 
 
