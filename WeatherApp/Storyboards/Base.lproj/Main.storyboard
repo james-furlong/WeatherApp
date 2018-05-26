@@ -57,9 +57,7 @@
                                     <constraint firstAttribute="height" constant="44" id="eMx-4D-HlC"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem systemItem="bookmarks" id="gyw-0C-ica">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" systemItem="bookmarks" id="gyw-0C-ica"/>
                                     <barButtonItem systemItem="flexibleSpace" id="Joc-in-geI">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </barButtonItem>

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashBackground" translatesAutoresizingMaskIntoConstraints="NO" id="04L-8F-Ppn">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="http___pluspng.com_img-png_art-of-sun-vector-png-sun-vector-png-images-pictures-becuo-900" translatesAutoresizingMaskIntoConstraints="NO" id="Qop-GM-V7a">
                                 <rect key="frame" x="62" y="208" width="250" height="250"/>
@@ -32,7 +32,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="04L-8F-Ppn" secondAttribute="bottom" id="21W-nu-IBi"/>
-                            <constraint firstItem="04L-8F-Ppn" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="20" id="BhH-sW-pE8"/>
+                            <constraint firstItem="04L-8F-Ppn" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="BhH-sW-pE8"/>
                             <constraint firstItem="Qop-GM-V7a" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ZMq-a7-wkp"/>
                             <constraint firstItem="Qop-GM-V7a" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dq2-ie-c4g"/>
                             <constraint firstItem="04L-8F-Ppn" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="o0E-wK-RfR"/>

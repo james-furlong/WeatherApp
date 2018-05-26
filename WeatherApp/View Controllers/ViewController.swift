@@ -47,8 +47,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var toolbarBackgroundColor : UIColor!
     var locationManager : CLLocationManager!
     var player : AVPlayer!
+    var latitude : Decimal!
+    var longitude : Decimal!
+    let activityIndicator = UIActivityIndicatorView()
     
     override func viewDidLoad() {
+        startLoading()
         super.viewDidLoad()
         if weather != nil {
             initialiseWeather()
@@ -61,7 +65,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func initialiseWeather() {
         var count = 0
         if weather != nil {
-            //loadInitialiseCoreDate()
             loadWeatherVideo()
             updateLabels()
             return
@@ -93,6 +96,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         loadWeatherVideo()
         updateLabels()
+        stopLoading()
     }
 
     override func didReceiveMemoryWarning() {
@@ -247,7 +251,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Load the weather video for the top of the view controller. If there is no video available, fall back onto static image of a clear day.
     func loadWeatherVideo() {
-        let videoString = Bundle.main.path(forResource: weather.WeatherMain, ofType: "mp4")
+        var videoString : Optional<String>
+        if weather.WeatherMain.contains("cloud") || weather.WeatherMain.contains("Cloud") {
+            videoString = Bundle.main.path(forResource: "Cloudy", ofType: "mp4")!
+        } else {
+            videoString = Bundle.main.path(forResource: weather.WeatherMain, ofType: "mp4")!
+        }
         guard let unwrappedVideoPath = videoString else {
             weatherImage.image = UIImage(named: "sunnyImage")
             return
@@ -400,6 +409,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // func to receive the information from updating the current location. Location is then stored locally, displayed, and then used to determine the location for the weather APIs
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue : CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        let tempLat = Decimal(locValue.latitude)
+        latitude = tempLat
+        let tempLon = Decimal(locValue.longitude)
+        longitude = tempLon
         geocode(latitude: locValue.latitude, longitude: locValue.longitude) { placemark, error in
             guard let placemark = placemark, error == nil else { return }
             DispatchQueue.main.async {
@@ -409,11 +422,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print("state:",    placemark.administrativeArea ?? "")
                 print("zip code:", placemark.postalCode ?? "")
                 print("country:",  placemark.country ?? "")
-                self.location = placemark.locality
+                print("latitude:", placemark.location ?? "")
+                let temp = (placemark.locality)?.replacingOccurrences(of: " ", with: "+")
+                self.location = temp
                 self.initialiseWeather()
             }
         }
     }
+    
     
     // Get the geocode of the location given by the location manager
     func geocode(latitude: Double, longitude: Double, completion: @escaping (CLPlacemark?, Error?) -> ()) {
@@ -424,6 +440,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             completion(placemark, nil)
         }
+    }
+    
+    func startLoading() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
+    }
+    
+    func stopLoading() {
+        activityIndicator.stopAnimating()
+        UIApplication.shared.endIgnoringInteractionEvents()
     }
     
     
